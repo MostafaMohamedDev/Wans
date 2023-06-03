@@ -24,8 +24,8 @@ span {
   border-radius: 20px;
   padding: 30px 0;
   margin-top: 30px;
-  width: 95%;
-  margin-left: 10px;
+  width:85%;
+  margin-left: 35px;
 }
 
 .worksSection {
@@ -54,8 +54,8 @@ span {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  height: 380px;
-  width: 300px;
+  height: 250x;
+  width: 280px;
   border-radius: 10px;
   color: white;
   cursor: pointer;

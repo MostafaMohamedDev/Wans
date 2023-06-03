@@ -38,7 +38,7 @@ const Works = () => {
             </div>
             <div className="cardd green col-lg-4 col-md-12 col-sm-12">
               <img src="images/relax.jpg" alt="Image 3" />
-              <h3 className="works-title">Relax</h3>
+              <h3 className="works-title ">Relax</h3>
               <p className="works-description">
                 Effortless searching, smooth payments, relaxation as easy as breathing.
               </p>

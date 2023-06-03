@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+      <div className="container-fluid nav-contain">
         <div className="navbar-brand">
           <img
             className="nav navimg"

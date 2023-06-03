@@ -41,6 +41,7 @@
   .slidHead {
     color: #020202;
     font-weight: bold;
+    font-size:20px;
   }
   
   .item:hover .layer {
@@ -50,7 +51,7 @@
   
   .slidSection {
     position: relative;
-    bottom: 50px;
+    bottom: 130px;
     width: 950px;
  
   }
