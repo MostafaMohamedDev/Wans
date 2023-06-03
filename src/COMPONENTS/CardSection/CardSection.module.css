@@ -1,0 +1,260 @@
+/* CardSection.module.css */
+
+.servicesSection {
+  position: relative;
+  height: 864px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.cardback {
+  background-color: red;
+}
+
+.iconPar {
+  color: #ff642e;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: bolder;
+}
+
+.iconHeader {
+  font-size: 50px;
+  position: relative;
+  text-align: center;
+}
+
+span {
+  color: #ff642e;
+}
+
+/* _____________________________FIRST-SECTIONS______________________________ */
+
+.cardSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-out;
+}
+
+.card:hover {
+  border-radius: 10px;
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: border-radius 0.3s;
+}
+
+.card:hover .cardImage {
+  border-radius: 10px;
+}
+
+.cardBody {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+  border-radius: 10px;
+  height: 80px;
+}
+
+.card:hover .cardBody {
+  opacity: 1;
+  transform: translateY(0);
+  height: 140px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 25px;
+  color: #ffffff;
+  font-family: "Questrial", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: bottom 0.3s ease-in-out;
+  bottom: 18px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 0.3s;
+  font-family: 'Geologica', sans-serif;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  padding-right: 5px;
+  justify-content: center;
+}
+
+.card:hover .cardDescription {
+  opacity: 1;
+  transform: translateY(0);
+  bottom: 20px;
+}
+
+.card:hover .cardTitle {
+  bottom: 70px;
+  color: #ff642e;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* _____________________________SECOND-SECTIONS______________________________ */
+
+.finalSection {
+  position: relative;
+  background-image: url(../../../public/Images/coverBar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border: 1px solid rgb(7, 6, 6);
+  border-radius: 20px;
+  margin-top: 50px;
+  backdrop-filter: blur(5px); /* Adjust the blur value as desired */
+}
+
+.finalSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 20px;
+  backdrop-filter: blur(5px); /* Adjust the blur value as desired */
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 130px;
+}
+
+.statItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 25px;
+  z-index: 9999;
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.statContent {
+  color: #333;
+  z-index: 9999;
+}
+
+.statHeading {
+  font-size: 24px;
+}
+
+.finalPar {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ff642e;
+  font-weight: bold;
+}
+
+.finalHead {
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.iconImage {
+  width: 80px;
+  padding-right: 5px;
+}
+
+/* _____________________________THIRD-SECTIONS______________________________ */
+
+@media (max-width: 992px) {
+  .cardSection {
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardSection {
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardBody {
+    height: auto;
+  }
+
+  .card:hover .cardBody {
+    height: auto;
+  }
+
+  .finalSection {
+    margin-top: 20px;
+  }
+
+  .statsContainer {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .statItem {
+    margin: 5px;
+  }
+}

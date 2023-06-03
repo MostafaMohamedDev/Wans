@@ -1,0 +1,146 @@
+/* Header.css */
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg-vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dark-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.568); /* Adjust the opacity as desired */
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+  text-align: left;
+  line-height: 25px;
+  font-family: 'Geologica', sans-serif;
+  font-weight: lighter;
+}
+
+.content-container h1 {
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+
+.content-container p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 1em 2em;
+  background: #786B3E;
+  border: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  text-trrgb:(255, 255, 255);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease 0s;
+  letter-spacing: 0.08rem;
+  font-family: 'Geologica', sans-serif;
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+  box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
+  color: black;
+  font-weight: bold;
+}
+
+.headimg {
+  width: 400px;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .content-container {
+    padding: 10px;
+  }
+
+  .content-container h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .content-container p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .btn {
+    padding: 0.8em 1.6em;
+    font-size: 0.9rem;
+  }
+
+  .headimg {
+    width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-container {
+    left: 40%;
+  }
+
+  .headimg {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    left: 50%;
+    padding: 10px;
+  }
+
+  .content-container h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .content-container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .btn {
+    padding: 0.6em 1.2em;
+    font-size: 0.8rem;
+  }
+
+  .headimg {
+    width: 300px;
+  }
+}

@@ -1,0 +1,155 @@
+.iconPar {
+  color: #ff642e;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: bolder;
+}
+
+.iconHead {
+  font-size: 60px;
+  position: relative;
+  text-align: center;
+}
+
+span {
+  color: #ff642e;
+}
+
+.workCards {
+  background-image: url(../../../public/Images/worksBG.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 1px transparent;
+  border-radius: 20px;
+  padding: 30px 0;
+  margin-top: 30px;
+  width: 95%;
+  margin-left: 10px;
+}
+
+.worksSection {
+  height: auto;
+  padding-top: 30px;
+}
+
+.cards-work {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: -5px;
+}
+
+.cards-work .cardd {
+  --bg: #e8e8e8be;
+  --contrast: #e2e0e0;
+  --grey: #93a1a1;
+  position: relative;
+  padding: 15px;
+  background-color: var(--bg);
+  border-radius: 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 380px;
+  width: 300px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+  margin-top: 25px;
+}
+
+.cards-work .cardd img {
+  width: 100%;
+  height: 190px;
+  border-radius: 10px;
+}
+
+.cards-work .cardd .cardd-content {
+  padding: 10px;
+}
+
+.cards-work .cardd .cardd-content h3.title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #333;
+}
+
+.cards-work .cardd .cardd-content p.description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.cards-work .cardd:hover {
+  transform: scale(1.1);
+  --bg: #e8e8e8;
+  --contrast: #e2e0e0;
+  --grey: #93a1a1;
+}
+
+.cards-work:hover > .cardd:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9);
+}
+
+.cards-work .cardd:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
+  filter: opacity(10%) contrast(105%);
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.cards-work .cardd:hover:before {
+  opacity: 0;
+}
+
+.works-title {
+  color: #000000;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.works-description {
+  color: #252525;
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+}
+
+/* Media Queries for Responsive Styling */
+
+@media (max-width: 992px) {
+  /* Medium devices (tablets, 768px and up) */
+  .cards-work {
+    flex-wrap: wrap;
+  }
+
+  .cards-work .cardd {
+    flex-basis: 46%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Small devices (landscape phones, 576px and up) */
+  .cards-work .cardd {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra small devices (portrait phones, less than 576px) */
+  .cards-work .cardd {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
